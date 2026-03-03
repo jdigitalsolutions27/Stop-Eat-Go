@@ -157,6 +157,18 @@ button {
   pointer-events: none;
 }
 
+.premium-card-hover {
+  transition:
+    transform 240ms ease,
+    box-shadow 240ms ease,
+    border-color 240ms ease;
+}
+
+.premium-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 60px rgba(20, 16, 13, 0.12);
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
