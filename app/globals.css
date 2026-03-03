@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f7f1e8;
+  --foreground: #181411;
+  --card: #fffaf2;
+  --border: rgba(53, 36, 21, 0.12);
+  --muted: #6b5a4b;
+  --primary: #8d2c1f;
+  --accent: #c7922f;
+  --danger: #b42318;
+  --ring: rgba(199, 146, 47, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-manrope), sans-serif;
+  background-image:
+    radial-gradient(circle at top left, rgba(233, 187, 102, 0.26), transparent 22%),
+    radial-gradient(circle at bottom right, rgba(141, 44, 31, 0.12), transparent 24%),
+    linear-gradient(180deg, #fbf5ec 0%, #f5ede2 42%, #f8f1e9 100%);
+  min-height: 100vh;
+}
+
+* {
+  border-color: var(--border);
+}
+
+::selection {
+  background: rgba(199, 146, 47, 0.2);
+}
+
+a,
+button {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.surface {
+  background: rgba(255, 250, 242, 0.78);
+  backdrop-filter: blur(18px);
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.text-kicker {
+  @apply text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--accent)];
+}
+
+.text-display {
+  font-family: var(--font-cormorant), serif;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(110deg, rgba(12, 9, 7, 0.86) 0%, rgba(12, 9, 7, 0.58) 46%, rgba(12, 9, 7, 0.24) 100%),
+    linear-gradient(180deg, rgba(20, 15, 11, 0.08) 0%, rgba(20, 15, 11, 0.62) 100%);
+}
+
+.grid-fade {
+  background-image:
+    linear-gradient(rgba(125, 96, 60, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 96, 60, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.95), transparent);
+}
+
+.gold-divider {
+  background: linear-gradient(90deg, transparent, rgba(199, 146, 47, 0.65), transparent);
+}
+
+.brand-canvas {
+  background:
+    radial-gradient(circle at 18% 16%, rgba(244, 196, 107, 0.22), transparent 20%),
+    radial-gradient(circle at 82% 12%, rgba(169, 58, 40, 0.18), transparent 22%),
+    radial-gradient(circle at 72% 38%, rgba(217, 143, 58, 0.14), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0));
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.42;
+  mix-blend-mode: multiply;
+  animation: drift 18s ease-in-out infinite;
+}
+
+.ambient-orb-1 {
+  left: -6rem;
+  top: 5rem;
+  height: 18rem;
+  width: 18rem;
+  background: radial-gradient(circle, rgba(244, 196, 107, 0.9), rgba(244, 196, 107, 0));
+}
+
+.ambient-orb-2 {
+  right: -5rem;
+  top: 18rem;
+  height: 20rem;
+  width: 20rem;
+  background: radial-gradient(circle, rgba(155, 43, 35, 0.82), rgba(155, 43, 35, 0));
+  animation-delay: -7s;
+}
+
+.ambient-orb-3 {
+  left: 35%;
+  top: 42rem;
+  height: 16rem;
+  width: 16rem;
+  background: radial-gradient(circle, rgba(207, 106, 45, 0.58), rgba(207, 106, 45, 0));
+  animation-delay: -12s;
+}
+
+.mesh-lines {
+  background-image:
+    linear-gradient(rgba(119, 87, 55, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(119, 87, 55, 0.08) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.78), transparent 80%);
+}
+
+.grain-overlay {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.25) 0.6px, transparent 0.8px),
+    radial-gradient(circle at 80% 30%, rgba(0, 0, 0, 0.1) 0.6px, transparent 0.8px),
+    radial-gradient(circle at 40% 80%, rgba(0, 0, 0, 0.08) 0.8px, transparent 1px);
+  background-size: 18px 18px, 22px 22px, 26px 26px;
+  opacity: 0.35;
+}
+
+.section-glow {
+  position: relative;
+}
+
+.section-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background:
+    linear-gradient(140deg, rgba(244, 196, 107, 0.18), transparent 28%),
+    linear-gradient(320deg, rgba(141, 44, 31, 0.12), transparent 30%);
+  pointer-events: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(16px, -18px, 0) scale(1.08);
+  }
+}
