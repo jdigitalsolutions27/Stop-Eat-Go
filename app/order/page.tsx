@@ -17,7 +17,7 @@ export default function OrderPage() {
         title="Fast checkout for pickup or nearby delivery."
         description="Add signature dishes, adjust quantities, include notes, and send your order with a clean, reliable flow."
       />
-      <section className="section-shell pb-20 pt-10">
+      <section className="section-shell pb-32 pt-10 md:pb-20">
         <OrderExperience />
       </section>
     </>

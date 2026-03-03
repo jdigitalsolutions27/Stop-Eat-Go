@@ -228,7 +228,7 @@ export function OrderExperience() {
       </div>
 
       <div className="space-y-6">
-        <Card className="sticky top-24">
+        <Card className="lg:sticky lg:top-24 lg:self-start">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>

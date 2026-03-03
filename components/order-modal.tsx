@@ -36,10 +36,10 @@ export function OrderModal({
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent className="overflow-hidden p-0 sm:max-w-3xl">
         <div className="grid md:grid-cols-[1fr_1fr]">
-          <div className="relative min-h-[280px]">
+          <div className="relative min-h-[220px] sm:min-h-[280px]">
             <SmartImage src={item.image} alt={item.name} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
-          <div className="p-6 sm:p-8">
+          <div className="p-5 sm:p-8">
             <DialogHeader>
               <div className="flex flex-wrap gap-2">
                 {item.tags.map((tag) => (
@@ -49,7 +49,7 @@ export function OrderModal({
               <DialogTitle>{item.name}</DialogTitle>
               <DialogDescription>{item.description}</DialogDescription>
             </DialogHeader>
-            <div className="mt-6 space-y-4">
+            <div className="mt-5 space-y-4 pb-2">
               <div className="grid gap-2">
                 <label className="text-sm font-medium">Quantity</label>
                 <Input
