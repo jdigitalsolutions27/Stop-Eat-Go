@@ -20,7 +20,7 @@ npm install
 npm run dev
 ```
 
-This workspace path contains an `&`, which can break npm scripts on Windows when npm uses `cmd.exe`. The included local [`.npmrc`](/d:/Web/Stop%20Eat%20%26%20Go/.npmrc) forces PowerShell as the script shell so `npm install` and `npm run dev` work from this folder.
+If you run this project from a Windows folder path containing `&`, npm may need PowerShell as the script shell. In that case, run `npm config set script-shell powershell.exe` locally on your machine instead of committing that setting to the repo.
 
 ## Main routes
 
